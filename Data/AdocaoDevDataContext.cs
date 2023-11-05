@@ -6,6 +6,7 @@ namespace Adocao.Data;
 
 public class AdocaoDevDataContext : DbContext
 {
+    private readonly string _connectionString = Configuration.ConnectionString;
     public DbSet<Administrador> Administradores { get; set; }
     public DbSet<Animal> Animais { get; set; }
     public DbSet<Especie> Especies { get; set; }
@@ -15,7 +16,7 @@ public class AdocaoDevDataContext : DbContext
     public DbSet<RecuperacaoSenha> RecuperacaoSenhas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer(Configuration.ConnectionString);
+        => options.UseSqlServer(this._connectionString);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
