@@ -55,7 +55,6 @@ public class AccountController : ControllerBase
         
     }
     
-    [AllowAnonymous]
     [HttpPost("/v1/register")]
     public async Task<IActionResult> Post(
         [FromBody] CreateAdministradorViewModel model,
