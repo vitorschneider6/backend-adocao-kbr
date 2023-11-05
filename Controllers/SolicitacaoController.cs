@@ -133,7 +133,7 @@ public class SolicitacaoController : ControllerBase
                              $"Nome do animal: {nomeAnimal}";
             var teste = emailService.sendMessage(
                 solicitacao.NomeSolicitante,
-                solicitacao.Email,
+                model.Email,
                 "Solicitação de adoção",
                 corpoEmail);
             return StatusCode(201, new ResultViewModel<SolicitacaoAdocaoAnimais>(solicitacao));
