@@ -16,8 +16,7 @@ public class AdocaoDevDataContext : DbContext
     public DbSet<RecuperacaoSenha> RecuperacaoSenhas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer(this._connectionString);
-
+        => options.UseSqlServer(_connectionString);
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new AdministradorMap());
