@@ -138,7 +138,7 @@ public class AccountController : ControllerBase
 
         try
         {
-            emailService.sendMessage(administrador.Nome, "vitor.pistolinha.schneider@hotmail.com",
+            emailService.sendMessage(administrador.Nome, email,
                 "Recuperação de senha",
                 $"Seu link de recuperação de senha é: http://localhost:4200/trocar-senha/{recuperacaoSenha.Id}", "Adoção KBR");
             return Ok("Link enviado com sucesso!");
