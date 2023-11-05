@@ -91,7 +91,7 @@ public class AccountController : ControllerBase
         }
         catch (Exception e)
         {
-            return BadRequest(new ResultViewModel<Administrador>("Ocorreu um erro ao tentar cadastrar o administrador." + e.Message));
+            return BadRequest(new ResultViewModel<Administrador>("Erro: " + e.Data));
         }
        
     }
