@@ -16,7 +16,7 @@ public class AdocaoDevDataContext : DbContext
     public DbSet<RecuperacaoSenha> RecuperacaoSenhas { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer(_connectionString);
+        => options.UseSqlServer("Server=tcp:adocao-kbr-server.database.windows.net,1433;Initial Catalog=vitor-adocao-kbr;Persist Security Info=False;User ID=adocao-kbr;Password=Milf_addiction0123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new AdministradorMap());
