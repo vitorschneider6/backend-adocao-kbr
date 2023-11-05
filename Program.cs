@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: "PoliticaAPI",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200")
+            policy.WithOrigins("https://vitor-adocao-kbr.vercel.app/")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
