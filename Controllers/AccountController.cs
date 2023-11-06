@@ -139,7 +139,7 @@ public class AccountController : ControllerBase
         {
             emailService.sendMessage(administrador.Nome, email,
                 "Recuperação de senha",
-                $"Seu link de recuperação de senha é: http://localhost:4200/trocar-senha/{recuperacaoSenha.Id}", "Adoção KBR");
+                $"Seu link de recuperação de senha é: <a>https://vitor-adocao-kbr.vercel.app/trocar-senha/{recuperacaoSenha.Id}</a>", "Adoção KBR");
             return Ok("Link enviado com sucesso!");
         }
         catch (Exception e)
